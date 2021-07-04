@@ -1,0 +1,27 @@
+{% load static %}
+{% load menu %}
+<section class="w3l-bootstrap-header">
+  <nav class="navbar navbar-expand-md navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/award.png' %}" class="img-fluid" width="52px">
+        DiamondDent</a>
+      <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+      {% show_menu 'header-menu' %}
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <a href="#domain" class="domain ml-3" data-toggle="modal" data-target="#DomainModal">
+        <div class="hamburger1">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </a>
+    </div>
+  </nav>
+</section>

@@ -1,0 +1,148 @@
+{% load static %}
+<section class="w3l-medpill-footer ">
+    <footer class="footer-28">
+      <div class="footer-bg-layer">
+        <div class="container py-lg-3">
+          <div class="row footer-top-28">
+            <div class="col-lg-4 col-md-6 col-sm-7 footer-list-28 mt-sm-5 mt-4">
+              <h6 class="footer-title-28">Контактная информация</h6>
+              <ul class="address">
+                <li>
+                  <p> р. Дагестан г. Хасавюрт ул. Дахадаева 95 <br>005005 РФ©</p>
+                </li>
+                <li class="mt-4">
+                  <p><span class="fa fa-phone"></span> <a href="tel:+404-11-22-89">05-05-05</a></p>
+                </li>
+                <li>
+                  <p><span class="fa fa-envelope"></span> <a
+                      href="mailto:DiamondDent@mail.com">DiamondDent@mail.com</a></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-5 footer-list-28 mt-sm-5 mt-4">
+              <h6 class="footer-title-28">Компания</h6>
+              <ul>
+                <li><a href="#url">Миссия и ценности</a></li>
+                <li><a href="#url">Публикации и отчеты</a></li>
+                <li><a href="#url">История и награды</a></li>
+                <li><a href="#url">Наши спецалисты</a></li>
+                <li><a href="#url">Политка конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-4 footer-list-28 mt-sm-5 mt-4">
+              <h6 class="footer-title-28">Наши услуги</h6>
+              <ul>
+                  <li><a href="#url">Ортодонтия</a></li>
+                <li><a href="#url">Терапевтическая стоматология</a></li>
+                <li><a href="#url">Ортопедическая стоматология</a></li>
+                <li><a href="#url">Хирургическая стоматология</a></li>
+                <li><a href="#url">Детская стоматология</a></li>
+                  <li><a href="#url">Челюстно-лицевая хирургия</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="midd-footer-28 align-center py-lg-4 py-3 mt-md-5 mt-3">
+        <div class="container">
+          <p class="copy-footer-28 text-center"> &copy; 2021 DiamondDent. Все права защищены. Разработано web-студией Zero</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+
+    <script src="{% static 'js/green-audio-player.js' %}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new GreenAudioPlayer('.ready-player-1', { stopOthersOnPlay: true });
+        });
+    </script>
+
+    <!-- video popup -->
+    <script>
+      $('#notify').change(function () {
+        if ($('#notify').is("Active")) {
+          $('body').css('overflow', 'hidden');
+        } else {
+          $('body').css('overflow', 'auto');
+        }
+      });
+    </script>
+    <!-- //video popup -->
+
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <!-- script for banner slider-->
+    <script>
+      $(document).ready(function () {
+        $('.owl-one').owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: false,
+          responsiveClass: true,
+          autoplay: false,
+          autoplayTimeout: 5000,
+          autoplaySpeed: 1000,
+          autoplayHoverPause: false,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false
+            },
+            480: {
+              items: 1,
+              nav: false
+            },
+            667: {
+              items: 1,
+              nav: true
+            },
+            1000: {
+              items: 1,
+              nav: true
+            }
+          }
+        })
+      })
+    </script>
+    <!-- //script -->
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </section>

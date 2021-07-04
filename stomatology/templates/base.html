@@ -1,0 +1,77 @@
+{% load static %}
+{% load cache %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>DiamondDent</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+    <!-- для анимаций -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+</html>
+{% cache 20 header %}
+{% include 'inc/_header.html' %}
+{% endcache %}
+
+<body>
+<!-- Domain Modal -->
+    <div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+
+          <div class="modal-body">
+            <div class="modal__content">
+              <h2 class="logo"><img src="{% static 'images/award.png' %}" class="img-fluid">DiamondDent</h2>
+              <p class="mt-md-3 mt-2">Клиника универсальной медицины.</p>
+              <div class="widget-social-icons mt-sm-5 mt-4">
+                <h5 class="widget-title">Свяжитесь с нами</h5>
+                <ul class="icon-rounded address">
+                  <li>
+                    <p>р. Дагестан г. Хасавюрт ул. Дахадаева 95<br>005005 РФ©</p>
+                  </li>
+                  <li class="mt-3">
+                    <p><span class="fa fa-phone"></span> <a href="tel:+404-11-22-89">05-05-05</a></p>
+                  </li>
+                  <li class="mt-2">
+                    <p><span class="fa fa-envelope"></span> <a
+                        href="mailto:DiamondDent@mail.com">DiamondDent@mail.com</a></p>
+                  </li>
+                  <li class="top_li1 mt-2">
+                    <p><a href="mailto:DiamondDent@mail.com"></a></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-social-icons mt-sm-5 mt-4">
+                <h5 class="widget-title">Следите за новостями</h5>
+                <ul class="icon-rounded">
+                  <li><a class="social-link twitter" href="#url" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="social-link linkedin" href="#url" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a class="social-link tumblr" href="#url" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- для анимаций -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+
+{% block content %} {% endblock %}
+
+{% include 'inc/_footer.html' %}
+
