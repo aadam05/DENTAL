@@ -1,2 +1,0 @@
-# DENTAL
-echo SALAM
